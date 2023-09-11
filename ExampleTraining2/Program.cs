@@ -5,16 +5,21 @@ namespace ExampleTraining2
 {
     class Program
     {
-        public static string Code;
-        public static bool num_ = false;
         static void Main(string[] args)
         {
             while (true)
             {
-                Console.WriteLine("Enter the number :");
-                string Number = Console.ReadLine();
-                Code = Validation.ValiadNumber(Number);
-                Console.WriteLine(Code);
+                try
+                {
+                    Console.WriteLine("Enter the number :");
+                    string Number = Console.ReadLine();
+                    Number = Validation.ValiadNumber(Number);
+                    Console.WriteLine(Number);
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
             }
         }
     }

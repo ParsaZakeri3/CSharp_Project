@@ -13,8 +13,7 @@ namespace ExampleTraining2
                 {
                     Console.WriteLine("Enter the number :");
                     string Number = Console.ReadLine();
-                    Number = Validation.ValiadNumber(Number);
-                    Console.WriteLine(Number);
+                    Console.WriteLine(Validation.ValiadNumber(Number));
                 }
                 catch (Exception ex)
                 {

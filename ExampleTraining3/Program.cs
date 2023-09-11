@@ -6,13 +6,22 @@ namespace ExampleTraining3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wellcom!");
-            Console.WriteLine("FirstName :");
-            string Fname = Console.ReadLine();
-            Console.WriteLine("LastName :");
-            string Lname = Console.ReadLine();
-            string FLname = valid(Fname, Lname);
-            Console.WriteLine(FLname);
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Wellcom!");
+                    Console.WriteLine("FirstName :");
+                    string Fname = Console.ReadLine();
+                    Console.WriteLine("LastName :");
+                    string Lname = Console.ReadLine();
+                    Console.WriteLine(valid(Fname, Lname));
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+            }
         }
 
         private static string valid(string Fname , string Lname)

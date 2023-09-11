@@ -6,14 +6,22 @@ namespace ExampleTraining4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("inter length :");
-            double length = double.Parse(Console.ReadLine());  // طول مستطیل
-            Console.WriteLine("inter width :");
-            double width = double.Parse(Console.ReadLine());   // عرض مستطیل
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("inter length :");
+                    double length = double.Parse(Console.ReadLine());  // طول مستطیل
+                    Console.WriteLine("inter width :");
+                    double width = double.Parse(Console.ReadLine());   // عرض مستطیل
 
-            double area = CalculateRectangleArea(length, width);
-
-            Console.WriteLine("area : " + area);
+                    Console.WriteLine("area : " + CalculateRectangleArea(length, width));
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+            }
         }
 
         static double CalculateRectangleArea(double length, double width)

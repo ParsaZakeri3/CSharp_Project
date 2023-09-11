@@ -6,12 +6,20 @@ namespace ExampleTraining5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("inter radius :");
-            double radius = double.Parse(Console.ReadLine());  // شعاع دایره
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("inter radius :");
+                    double radius = double.Parse(Console.ReadLine());  // شعاع دایره
 
-            double perimeter = CalculateCirclePerimeter(radius);
-
-            Console.WriteLine("perimeter : " + perimeter);
+                    Console.WriteLine("perimeter : " + CalculateCirclePerimeter(radius));
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+            }
         }
 
         static double CalculateCirclePerimeter(double radius)
